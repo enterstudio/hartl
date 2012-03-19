@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   
-  @
+  @appname = "BotFlip"
+  
   def home
   end
 
