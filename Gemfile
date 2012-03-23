@@ -25,15 +25,13 @@ gem 'jquery-rails', '2.0.0'
 group :test, :development do
   gem 'rspec-rails', '2.8.1'
   gem 'guard-rspec', '0.5.5'
-  gem 'guard-spork', '0.3.2'
-  gem 'spork', '0.9.0'
 end
 
 group :test do
   gem 'rspec-rails', '2.8.1'
   gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '1.4.0'
   gem 'rb-fsevent', '0.4.3.1', :require => false
-  gem 'growl', '1.0.3'
 end
 
 group :production do
