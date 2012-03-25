@@ -1,7 +1,7 @@
 <% if @user.errors.any? %>
 <div id="error_explanation">
-	<div class="alert alert-error">
-		Your input contains <%= pluralize(@user.errors.count, "error") %>.
+	<div class="alert alert-error alert-error-top">
+		Your input contains	<%= pluralize(@user.errors.count, "error")%>.	
 	</div>
 	<div class="alert alert-error">	
 		<ul>

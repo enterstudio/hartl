@@ -2,11 +2,15 @@ Botflip::Application.routes.draw do
   get "users/new"
 
   root to: 'static_pages#home'
-  
+
   resources :users
-  
-  match '/help', to: 'static_pages#help'
-  match '/about', to: 'static_pages#about'
+  resources :sessions, only: [:new, :create, :destroy]
+
+  match '/signin',  to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+
+  match '/help',    to: 'static_pages#help'
+  match '/about',   to: 'static_pages#about'
   match '/signup',  to: 'users#new'
 
   # The priority is based upon order of creation:

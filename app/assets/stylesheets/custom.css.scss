@@ -149,15 +149,28 @@ input, textarea, select, .uneditable-input {
 	@include box_sizing;
 }
 
-//making the form textfields smaller
+//making the signup form textfields smaller
 .new_user {
 	width:340px;
 	margin: auto;
 }
 
-.user_signup {
+//making successful alerts center aligned
+.alert-success {
 	text-align:center;
 }
+
+//making failure alerts center aligned
+.alert-error-top {
+	text-align:center;
+}
+
+//making the signin form textfields smaller
+.new_session {
+	width:340px;
+	margin: auto;
+}
+
 
 //For errors
 
