@@ -150,25 +150,23 @@ input, textarea, select, .uneditable-input {
 }
 
 //making the signup form textfields smaller
-.new_user {
+.new_user, .edit_user, .new_session{
 	width:340px;
 	margin: auto;
 }
 
-//making successful alerts center aligned
-.alert-success {
+//making successful, notice, and error alerts center aligned and small
+.alert-success, .alert-notice, .alert-error {
 	text-align:center;
+	width:290px;
+	margin:auto;
+	margin-bottom: 20px;
+
 }
 
-//making failure alerts center aligned
-.alert-error-top {
-	text-align:center;
-}
-
-//making the signin form textfields smaller
-.new_session {
-	width:340px;
-	margin: auto;
+//making the bottom of failure alerts in signup page proper
+.alert-error-bottom {
+	text-align:left;
 }
 
 
@@ -187,7 +185,22 @@ input, textarea, select, .uneditable-input {
 	@extend .error;
 }
 
+/* users index */
 
+.users {
+	list-style: none;
+	margin: auto;
+	width: 340px;
+
+	li {
+		overflow: auto;
+		padding: 10px 0;
+		border-top: 1px solid $grayLighter;
+		&:last-child {
+			border-bottom: 1px solid $grayLighter
+		}
+	}
+}
 
 /* miscellaneous */
 

@@ -1,9 +1,9 @@
 <% if @user.errors.any? %>
 <div id="error_explanation">
-	<div class="alert alert-error alert-error-top">
+	<div class="alert alert-error alert-error">
 		Your input contains	<%= pluralize(@user.errors.count, "error")%>.	
 	</div>
-	<div class="alert alert-error">	
+	<div class="alert alert-error-bottom alert-error">	
 		<ul>
 			<% @user.errors.full_messages.each do |msg| %>
 			<li>&raquo; <%= msg %></li>
