@@ -149,7 +149,20 @@ input, textarea, select, .uneditable-input {
 	@include box_sizing;
 }
 
-//making the signup form textfields smaller
+//Styling Microposts
+.span4{
+	width:36%;
+}
+
+//Styling Feed
+.span6{
+	width:59%;
+}
+
+span {display:block}
+
+
+//making the signup and signin and edit form textfields smaller
 .new_user, .edit_user, .new_session{
 	width:340px;
 	margin: auto;
@@ -201,6 +214,39 @@ input, textarea, select, .uneditable-input {
 		}
 	}
 }
+
+//For styling Microposts
+.btn-info {
+	text-align:left;
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+  
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.content {
+  display: block;
+}
+
+.timestamp {
+  color: $grayLight;
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
 
 /* miscellaneous */
 

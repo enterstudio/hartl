@@ -1,0 +1,13 @@
+<li>
+	<span class="content btn btn-info btn-large"><%= micropost.content %></span>
+	<br/>
+
+	<span class="timestamp btn">
+		Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+	</span>
+	<%= link_to "delete", micropost,
+	class: "btn btn-danger", 
+		method:  :delete,
+		confirm: "You sure?",
+		title:   micropost.content%>
+	</li>

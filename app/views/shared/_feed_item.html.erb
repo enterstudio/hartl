@@ -1,0 +1,19 @@
+<li id="<%= feed_item.id %>">
+	<%= link_to gravatar_for(feed_item.user, size: 34), feed_item.user %>
+	<br/>
+	<span class="user btn btn-large disabled">
+		<%= link_to feed_item.user.name, feed_item.user %>
+	</span>
+	<br/><br/>
+	<span class="content btn btn-large btn-info"><%= feed_item.content %></span>
+	<br/>
+	<span class="timestamp btn">
+		Posted <%= time_ago_in_words(feed_item.created_at) %> ago.
+	</span>
+	<% if current_user?(feed_item.user) %>
+	<%= link_to "delete", feed_item, class: "btn btn-danger", 
+	method:  :delete,
+	confirm: "You sure?",
+	title:   feed_item.content %>
+	<% end %>
+</li>
