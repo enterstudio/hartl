@@ -36,4 +36,6 @@ end
 
 group :production do
   gem 'pg', '0.12.2'
+  gem "memcachier"
+  gem "dalli"
 end
