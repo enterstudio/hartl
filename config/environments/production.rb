@@ -2,7 +2,7 @@ Botflip::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   
   # Expires header
-  config.static_cache_control = "public, max-age=3600"
+  config.static_cache_control = "public, max-age=604800"
 
   # Code is not reloaded between requests
   config.cache_classes = true
