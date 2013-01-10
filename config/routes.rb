@@ -1,4 +1,18 @@
 Hartl::Application.routes.draw do
+  get "info_pages/home"
+
+  get "info_pages/faq"
+
+  get "info_pages/termsofuse"
+
+  get "info_pages/privacy"
+
+  get "info_pages/aboutus"
+
+  get "info_pages/contact"
+
+  get "info_pages/jobs"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
