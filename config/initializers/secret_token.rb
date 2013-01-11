@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Hartl::Application.config.secret_token = '7be0acc971b0fbc791d0576c7a404b28461eb89afe17c9ccdcc652425a71c1793cb91f951668c3057bf54b5c97a277485caffcdfd3f6e19d9fbec2d160e1a0ef'
+Hartl::Application.config.secret_token = 'ef0a112f0b2db6ad758f54d8bde22404ba2dfbb16114b5b04cd801cd9aaf44ca9b214874104120c14e5b85d0380edbcd6d071f868e3c6f804bd4e73ebaf747d1'
