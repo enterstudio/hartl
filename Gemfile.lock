@@ -108,7 +108,7 @@ DEPENDENCIES
   coffee-rails
   jquery-rails
   pg
-  rails
+  rails (= 3.2.11)
   sass-rails
   sqlite3
   uglifier (>= 1.0.3)
