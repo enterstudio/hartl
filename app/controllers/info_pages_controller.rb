@@ -1,11 +1,8 @@
 class InfoPagesController < ApplicationController
-  def home
-  end
-
   def faq
   end
 
-  def termsofuse
+  def terms
   end
 
   def privacy
@@ -18,5 +15,8 @@ class InfoPagesController < ApplicationController
   end
 
   def jobs
+  end
+
+  def quotes
   end
 end
