@@ -11,8 +11,11 @@ end
 
 
 group :development, :test do
+
+  # gem 'rspec-rails'
   gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'guard-minitest'
 end
 
 
@@ -29,10 +32,6 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
-group :test do
-  gem 'capybara'
-end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
