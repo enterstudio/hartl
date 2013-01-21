@@ -14,28 +14,36 @@ end
 
 group :development, :test do
 
-  # gem 'rspec-rails'
+  ## gem 'rspec-rails'
   gem 'sqlite3'
   
-  #testing
+  ## testing
   gem 'capybara'
+  gem 'minitest'
+  gem 'minitest-wscolor'
+  gem 'minitest-matchers'
   gem 'minitest-spec-rails'
+  gem 'capybara_minitest_spec'
+  gem 'turn'
   
-  #guard
-  gem 'guard-minitest'
+  ## guard
   gem 'rb-fsevent'
   gem 'terminal-notifier-guard'
   gem 'guard-pow'
   gem 'guard-bundler'
   gem 'guard-livereload'
-  gem 'guard-spork'
+  gem 'guard-sporkminitest'
+  gem 'guard-minitest'
   
-  #spork
-  gem 'spork'
+  ## spork
   gem 'spork-minitest', "~> 1.0.0.beta2"
   
-  #rack-livereload
+  ## rack-livereload
   gem 'rack-livereload'
+  
+  ## errors
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 

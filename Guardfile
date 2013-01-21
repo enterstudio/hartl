@@ -12,33 +12,40 @@ guard 'livereload' do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard 'bundler' do
+guard 'spork', :minitest_env => { 'RAILS_ENV' => 'test' }, cucumber: false, test_unit: false, rspec: false  do
+  watch('config/application.rb')
+  watch('config/environment.rb')
+  watch('config/environments/test.rb')
+  watch(%r{^config/initializers/.+\.rb$})
   watch('Gemfile')
-  # Uncomment next line if Gemfile contain `gemspec' command
-  # watch(/^.+\.gemspec/)
+  watch('Gemfile.lock')
+  watch('test/test_helper.rb') { :MiniTest }
 end
 
-guard 'minitest', :all_after_pass => false, :drb => true do
+guard 'minitest', all_on_start: true, all_after_pass: false, drb: false do
+
+  ## Minitest for Rails -- Spec Style
+  watch(%r|^test/.*/(.*)\.rb|)            
+  watch(%r|^app/controllers/(.*)/.*\.rb|) { |m| "test/controllers/#{m[1]}_test.rb" }
+  watch(%r|^app/helpers/(.*)/.*\.rb|)     { |m| "test/helpers/#{m[1]}_test.rb" }
+  watch(%r|^app/models/(.*)/.*\.rb|)      { |m| "test/models/#{m[1]}_test.rb" }
+  watch(%r|^app/views/(.*)/.*\.erb|)      { |m| "test/views/#{m[1]}_test.rb" }
+  
   # with Minitest::Unit
   # watch(%r|^test/(.*)\/?test_(.*)\.rb|)
   # watch(%r|^lib/(.*)([^/]+)\.rb|)     { |m| "test/#{m[1]}test_#{m[2]}.rb" }
   # watch(%r|^test/test_helper\.rb|)    { "test" }
 
   # with Minitest::Spec
-  watch(%r|^spec/(.*)_spec\.rb|)
-  watch(%r|^lib/(.*)([^/]+)\.rb|)     { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
-  watch(%r|^spec/spec_helper\.rb|)    { "spec" }
+  # watch(%r|^spec/(.*)_spec\.rb|)
+  # watch(%r|^lib/(.*)([^/]+)\.rb|)     { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
+  # watch(%r|^spec/spec_helper\.rb|)    { "spec" }
+end
 
-  # Rails 3.2
-  watch(%r|^app/controllers/(.*)\.rb|) { |m| "spec/controllers/#{m[1]}_test.rb" }
-  watch(%r|^app/helpers/(.*)\.rb|)     { |m| "spec/helpers/#{m[1]}_test.rb" }
-  watch(%r|^app/models/(.*)\.rb|)      { |m| "spec/unit/#{m[1]}_test.rb" }
-  watch(%r|^app/views/(.*)/|)          { |m| "spec/requests/#{m[1]}_spec.rb"}
-  
-  # Rails
-  # watch(%r|^app/controllers/(.*)\.rb|) { |m| "test/functional/#{m[1]}_test.rb" }
-  # watch(%r|^app/helpers/(.*)\.rb|)     { |m| "test/helpers/#{m[1]}_test.rb" }
-  # watch(%r|^app/models/(.*)\.rb|)      { |m| "test/unit/#{m[1]}_test.rb" }  
+guard 'bundler' do
+  watch('Gemfile')
+  # Uncomment next line if Gemfile contain `gemspec' command
+  # watch(/^.+\.gemspec/)
 end
 
 guard 'pow', :restart_on_start => true do
@@ -52,6 +59,3 @@ guard 'pow', :restart_on_start => true do
   watch(%r{^config/environments/.*\.rb$})
   watch(%r{^config/initializers/.*\.rb$})
 end
-
-
-

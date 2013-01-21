@@ -7,6 +7,21 @@ Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
+  
+  ## MiniTest!
+  ENV["RAILS_ENV"] = "test"
+  require File.expand_path('../../config/environment', __FILE__)
+  require 'minitest/autorun'
+  require 'capybara/rails'
+  
+  class ViewTest < Minitest::Spec
+    include Rails.application.routes.url_helpers
+    include Capybara::DSL
+    register_spec_type /view$/, self
+  end
+  
+  Turn.config.format = :progress
+  
 
 end
 
