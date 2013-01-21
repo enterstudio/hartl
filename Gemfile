@@ -1,10 +1,12 @@
 source 'https://rubygems.org'
 
+#core
 gem 'rails', '~>3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+#heroku
 group :production do
   gem 'pg'
 end
@@ -14,8 +16,26 @@ group :development, :test do
 
   # gem 'rspec-rails'
   gem 'sqlite3'
+  
+  #testing
   gem 'capybara'
+  gem 'minitest-spec-rails'
+  
+  #guard
   gem 'guard-minitest'
+  gem 'rb-fsevent'
+  gem 'terminal-notifier-guard'
+  gem 'guard-pow'
+  gem 'guard-bundler'
+  gem 'guard-livereload'
+  gem 'guard-spork'
+  
+  #spork
+  gem 'spork'
+  gem 'spork-minitest', "~> 1.0.0.beta2"
+  
+  #rack-livereload
+  gem 'rack-livereload'
 end
 
 
