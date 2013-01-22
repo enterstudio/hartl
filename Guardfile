@@ -12,16 +12,6 @@ guard 'livereload' do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard 'spork', :minitest_env => { 'RAILS_ENV' => 'test' }, cucumber: false, test_unit: false, rspec: false  do
-  watch('config/application.rb')
-  watch('config/environment.rb')
-  watch('config/environments/test.rb')
-  watch(%r{^config/initializers/.+\.rb$})
-  watch('Gemfile')
-  watch('Gemfile.lock')
-  watch('test/test_helper.rb') { :MiniTest }
-end
-
 guard 'minitest', all_on_start: true, all_after_pass: false, drb: false do
 
   ## Minitest for Rails -- Spec Style

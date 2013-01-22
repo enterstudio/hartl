@@ -14,17 +14,17 @@ end
 
 group :development, :test do
 
-  ## gem 'rspec-rails'
   gem 'sqlite3'
   
   ## testing
   gem 'capybara'
   gem 'minitest'
-  gem 'minitest-wscolor'
   gem 'minitest-matchers'
   gem 'minitest-spec-rails'
   gem 'capybara_minitest_spec'
-  gem 'turn'
+  gem 'minitest-focus'
+  gem 'minitest-wscolor'
+  gem 'm'
   
   ## guard
   gem 'rb-fsevent'
@@ -32,11 +32,7 @@ group :development, :test do
   gem 'guard-pow'
   gem 'guard-bundler'
   gem 'guard-livereload'
-  gem 'guard-sporkminitest'
   gem 'guard-minitest'
-  
-  ## spork
-  gem 'spork-minitest', "~> 1.0.0.beta2"
   
   ## rack-livereload
   gem 'rack-livereload'
@@ -45,6 +41,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+# Use Puma as the app server
+gem 'puma'
 
 
 # Gems used only for assets and not required
