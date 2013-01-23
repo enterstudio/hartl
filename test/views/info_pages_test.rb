@@ -45,11 +45,12 @@ describe "Info pages view" do
     end
   end
   
-  describe "Privacy page" do
+  describe "Privacy page", js: true do
 
     it "should have the Header 'Privacy'" do
       visit '/info_pages/privacy'
       page.must_have_content('Privacy')
+      page.status_code.must_equal 200
     end
   end
   
@@ -60,4 +61,28 @@ describe "Info pages view" do
       page.must_have_content('Quotes')
     end
   end
+  
+  describe "Home page" do
+
+    it "should have the Header 'Home'" do
+      visit '/info_pages/home'
+      page.must_have_content('Home')
+    end
+  end
+  
+end
+
+
+describe "Info pages integration" do
+  
+  puts "#{Capybara.current_driver}"
+  
+  before {visit '/info_pages/terms'}
+  let(:h1) {find 'h1'}
+  
+  it "renders" do
+    h1.must_be :present?
+  end
+  
+  
 end

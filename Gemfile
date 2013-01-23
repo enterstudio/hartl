@@ -18,10 +18,12 @@ group :development, :test do
   
   ## testing
   gem 'capybara'
+  gem 'poltergeist'
   gem 'minitest'
   gem 'minitest-matchers'
   gem 'minitest-spec-rails'
   gem 'capybara_minitest_spec'
+  gem 'minitest-metadata', require: false
   gem 'minitest-focus'
   gem 'minitest-wscolor'
   gem 'm'
