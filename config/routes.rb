@@ -12,8 +12,8 @@ Hartl::Application.routes.draw do
   get "info_pages/jobs"
 
   get "info_pages/quotes"
-
-  get "static_pages/testimonials"
+  
+  get "info_pages/home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

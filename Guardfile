@@ -12,24 +12,30 @@ guard 'livereload' do
   watch(%r{(app|vendor)(/assets/\w+/(.+\.(css|js|html))).*}) { |m| "/assets/#{m[3]}" }
 end
 
-guard 'minitest', all_on_start: true, all_after_pass: false, drb: false do
+# Add files and commands to this file, like the example:
+#   watch(%r{file/path}) { `command(s)` }
 
-  ## Minitest for Rails -- Spec Style
-  watch(%r|^test/.*/(.*)\.rb|)            
-  watch(%r|^app/controllers/(.*)/.*\.rb|) { |m| "test/controllers/#{m[1]}_test.rb" }
-  watch(%r|^app/helpers/(.*)/.*\.rb|)     { |m| "test/helpers/#{m[1]}_test.rb" }
-  watch(%r|^app/models/(.*)/.*\.rb|)      { |m| "test/models/#{m[1]}_test.rb" }
-  watch(%r|^app/views/(.*)/.*\.erb|)      { |m| "test/views/#{m[1]}_test.rb" }
-  
-  # with Minitest::Unit
-  # watch(%r|^test/(.*)\/?test_(.*)\.rb|)
-  # watch(%r|^lib/(.*)([^/]+)\.rb|)     { |m| "test/#{m[1]}test_#{m[2]}.rb" }
-  # watch(%r|^test/test_helper\.rb|)    { "test" }
-
-  # with Minitest::Spec
-  # watch(%r|^spec/(.*)_spec\.rb|)
-  # watch(%r|^lib/(.*)([^/]+)\.rb|)     { |m| "spec/#{m[1]}#{m[2]}_spec.rb" }
-  # watch(%r|^spec/spec_helper\.rb|)    { "spec" }
+guard 'shell' do
+  watch(%r|^app/views/(.*)/.*\.erb|) do |m|
+    system('terminal-notifier-notify -message "Check Terminal for Results" -title "Spring is Running View Tests"')
+    system("spring test test/views/#{m[1]}_test.rb")
+  end 
+  watch(%r|^app/controllers/(.*)/.*\.erb|) do |m|
+    system('terminal-notifier-notify -message "Check Terminal for Results" -title "Spring is Running Controller Tests"')
+    system("spring test test/controllers/#{m[1]}_test.rb")
+  end 
+  watch(%r|^app/helpers/(.*)/.*\.erb|) do |m|
+    system('terminal-notifier-notify -message "Check Terminal for Results" -title "Spring is Running Helper Tests"')
+    system("spring test test/helpers/#{m[1]}_test.rb")
+  end 
+  watch(%r|^app/models/(.*)/.*\.erb|) do |m|
+    system('terminal-notifier-notify -message "Check Terminal for Results" -title "Spring is Running Model Tests"')
+    system("spring test test/models/#{m[1]}_test.rb")
+  end 
+  watch(%r|^test/(.*)/(.*)\.rb|) do |m|
+    system('terminal-notifier-notify -message "Check Terminal for Results" -title "Spring is Running Testfile Tests"')
+    system("spring test test/#{m[1]}/#{m[2]}.rb")
+  end
 end
 
 guard 'bundler' do
@@ -49,3 +55,4 @@ guard 'pow', :restart_on_start => true do
   watch(%r{^config/environments/.*\.rb$})
   watch(%r{^config/initializers/.*\.rb$})
 end
+

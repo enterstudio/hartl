@@ -6,7 +6,7 @@ gem 'rails', '~>3.2.11'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#heroku
+## heroku
 group :production do
   gem 'pg'
 end
@@ -23,10 +23,8 @@ group :development, :test do
   gem 'minitest-matchers'
   gem 'minitest-spec-rails'
   gem 'capybara_minitest_spec'
-  gem 'minitest-metadata', require: false
   gem 'minitest-focus'
   gem 'minitest-wscolor'
-  gem 'm'
   
   ## guard
   gem 'rb-fsevent'
@@ -34,14 +32,22 @@ group :development, :test do
   gem 'guard-pow'
   gem 'guard-bundler'
   gem 'guard-livereload'
-  gem 'guard-minitest'
+  gem 'guard-shell'
   
   ## rack-livereload
   gem 'rack-livereload'
   
+  ## spring accelerator (like spork)
+  gem 'spring'
+  
   ## errors
   gem 'better_errors'
   gem 'binding_of_caller'
+  
+  ## pry for debugging
+  gem 'pry'
+  gem 'awesome_print'
+  
 end
 
 # Use Puma as the app server
