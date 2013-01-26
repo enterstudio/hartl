@@ -1,9 +1,0 @@
-Run options: --seed 445
-
-# Running tests:
-
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
-
-Finished tests in 0.323012s, 24.7669 tests/s, 27.8627 assertions/s.
-
-8 tests, 9 assertions, [32m0 failures, 0 errors, 0 skips[0m
