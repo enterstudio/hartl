@@ -1,19 +1,13 @@
 Hartl::Application.routes.draw do
-  get "info_pages/faq"
+  root to: 'info_pages#home'
 
-  get "info_pages/terms"
-
-  get "info_pages/privacy"
-
-  get "info_pages/aboutus"
-
-  get "info_pages/contact"
-
-  get "info_pages/jobs"
-
-  get "info_pages/quotes"
-  
-  get "info_pages/home"
+  match '/faq',       to: 'info_pages#faq'
+  match '/aboutus',   to: 'info_pages#aboutus'
+  match '/contact',   to: 'info_pages#contact' 
+  match '/terms',     to: 'info_pages#terms' 
+  match '/privacy',   to: 'info_pages#privacy' 
+  match '/jobs',      to: 'info_pages#jobs' 
+  match '/quotes',    to: 'info_pages#quotes'   
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

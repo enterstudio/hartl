@@ -43,6 +43,7 @@ group :development, :test do
   ## errors
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'meta_request'
   
   ## pry for debugging
   gem 'pry'
@@ -59,6 +60,7 @@ gem 'puma'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails'
+  
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -66,7 +68,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+#jquery
 gem 'jquery-rails'
+
+#styling
+gem 'bootstrap-sass'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

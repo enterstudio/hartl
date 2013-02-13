@@ -9,16 +9,17 @@ describe "Info pages view" do
   describe "Home page" do
     
     it "should have the Header 'Home' and correct title" do
-      visit '/info_pages/home'
-      h1.must_have_content("Home")
-      title.must_include("| Home")
+      visit root_path
+      h1.must_have_content("Welcome to MiniFlip")
+      title.must_equal("Hartl App")
+      title.wont_include("| Home")
     end
   end
   
   describe "Terms page" do
 
     it "should have the Header 'Terms' and correct title" do
-      visit '/info_pages/terms'
+      visit terms_path
       h1.must_have_content("Terms")
       title.must_include("| Terms")
     end
@@ -27,7 +28,7 @@ describe "Info pages view" do
   describe "About Us page" do
 
     it "should have the Header 'About Us' and correct title" do
-      visit '/info_pages/aboutus'
+      visit aboutus_path
       h1.must_have_content("About Us")
       title.must_include("| About Us")
     end
@@ -36,7 +37,7 @@ describe "Info pages view" do
   describe "FAQ page" do
 
     it "should have the Header 'Frequently Answered Questions' and correct title" do
-      visit '/info_pages/faq'
+      visit faq_path
       h1.must_have_content("Frequently Answered Questions")
       title.must_include("| FAQ")
     end
@@ -45,7 +46,7 @@ describe "Info pages view" do
   describe "Contact page" do
 
     it "should have the Header 'Contact' and correct title" do
-      visit '/info_pages/contact'
+      visit contact_path
       h1.must_have_content("Contact Us")
       title.must_include("| Contact")
     end
@@ -54,7 +55,7 @@ describe "Info pages view" do
   describe "Jobs page" do
 
     it "should have the Header 'Jobs' and correct title" do
-      visit '/info_pages/jobs'
+      visit jobs_path
       h1.must_have_content("Jobs")
       title.must_include("| Jobs")
     end
@@ -63,7 +64,7 @@ describe "Info pages view" do
   describe "Privacy page" do
 
     it "should have the Header 'Privacy' and correct title" do
-      visit '/info_pages/privacy'
+      visit privacy_path
       h1.must_have_content("Privacy")
       title.must_include("| Privacy")
     end
@@ -72,7 +73,7 @@ describe "Info pages view" do
   describe "Quotes page" do
 
     it "should have the Header 'Quotes' and correct title" do
-      visit '/info_pages/quotes'
+      visit quotes_path
       h1.must_have_content("Quotes from Students")
       title.must_include("| Quotes")
     end
