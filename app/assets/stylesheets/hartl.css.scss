@@ -8,6 +8,14 @@ body {
 $grayMediumLight: #eaeaea;
 
 
+/*Smaller hero-unit*/
+
+.hero-unit{
+	h1{
+		font-size: 3em;
+	}
+}
+
 /*====================================*/
 
 html {
@@ -55,27 +63,27 @@ p {
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $grayMediumLight;
-  color: $grayLight;
-  a {
-    color: $gray;
-    &:hover { 
-      color: $grayDarker;
-    }
-  }  
-  small { 
-    float: left; 
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 10px;
-    }
-  }
+	margin-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid $grayMediumLight;
+	color: $grayLight;
+	a {
+		color: $gray;
+		&:hover { 
+			color: $grayDarker;
+		}
+	}  
+	small { 
+		float: left; 
+	}
+	ul {
+		float: right;
+		list-style: none;
+		li {
+			float: left;
+			margin-left: 10px;
+		}
+	}
 }
 
 /* Sticky footer styles
