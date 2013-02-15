@@ -1,4 +1,6 @@
 Hartl::Application.routes.draw do
+  get "users/new"
+
   root to: 'info_pages#home'
 
   match '/faq',       to: 'info_pages#faq'

@@ -1,14 +1,24 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "sample app", '#', id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home",    '#' %></li>
-          <li><%= link_to "Help",    '#' %></li>
-          <li><%= link_to "Sign in", '#' %></li>
-        </ul>
-      </nav>
-    </div>
-  </div>
+<header class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
+			
+			<%= link_to "MiniFeed", '#', class: "brand" %>
+			
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			
+				<nav>
+					<ul class="nav pull-right">
+						<li class="active"><%= link_to "Home", '#'%></li>
+						<li><%= link_to "FAQ", '#'%></li>
+						<li><%= link_to "Sign In", '#'%></li>
+					</ul>
+				</nav>
+			
+		</div>
+	</div>
 </header>
