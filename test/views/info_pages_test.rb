@@ -10,7 +10,7 @@ describe "Info pages view" do
     
     it "should have the Header 'Home' and correct title" do
       visit root_path
-      h1.must_have_content("Welcome to MiniFlip")
+      h1.must_have_content("Mini Feed")
       title.must_equal("Hartl App")
       title.wont_include("| Home")
     end
@@ -47,7 +47,7 @@ describe "Info pages view" do
 
     it "should have the Header 'Contact' and correct title" do
       visit contact_path
-      h1.must_have_content("Contact Us")
+      h1.must_have_content("Contact Me")
       title.must_include("| Contact")
     end
   end
