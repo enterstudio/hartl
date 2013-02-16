@@ -1,0 +1,103 @@
+
+// primary colors
+$text-blue: #7fb4e5;
+$heading-blue: #4578a0;
+$dropdown-border: lighten($heading-blue, 25%);
+
+//Company name
+.navbar {
+	.brand {
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $heading-blue;
+		
+		&:hover{
+			text-shadow: 1px 1px 0 rgba($text-blue, 0.5);			
+		}
+	}
+}
+
+
+//Navbar adjustments
+$white-alpha: 					  rgba(255,255,255,0.5);
+
+$navbarBackground: 				  $white-alpha;
+$navbarBackgroundHighlight:		  lighten($navbarBackground,10%);
+$navbarBorder: 					  darken($navbarBackground, 10%);
+$navbarLinkColor:                 $heading-blue;
+$navbarLinkColorHover:            darken($heading-blue, 20%);
+$navbarLinkColorActive:           $navbarLinkColorHover;
+$navbarLinkBackgroundActive:      lighten($text-blue, 12%);
+$navbarLinkBackgroundHover:       lighten($text-blue, 25%);
+
+.navbar .btn-navbar {
+  background-color: $navbarLinkBackgroundHover;
+  -webkit-border-radius: 4px;
+     -moz-border-radius: 4px;
+          border-radius: 4px;
+		  
+		  border-color: $dropdown-border $dropdown-border darken($dropdown-border, 10%) $dropdown-border;
+		  border-width: 2px;
+		  &:hover {
+		  	background-color: lighten($navbarLinkBackgroundHover, 1%);
+		  }
+}
+
+.navbar .btn-navbar .icon-bar {
+  background-color: $heading-blue;
+}
+
+.btn .btn-navbar {
+	
+}
+
+.btn-navbar .icon-bar + .icon-bar {
+  margin-top: 3px;
+}
+
+/* Sticky footer styles*/
+//-------------------------------------------------- 
+
+$footer-height: 45px;
+$footer-border: 2px;
+
+html,
+body {
+	height: 100%;
+	/* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	margin: 0 auto ($footer_height * -1) - $footer-border;
+}
+
+/* Set the fixed height of the footer here */
+#push, #footer {
+	height: $footer-height;
+}
+#footer {
+	background-color: #f5f5f5;
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+@media (max-width: 767px) {
+	#footer {
+		margin-left: -20px;
+		margin-right: -20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+#wrap > .container {
+	padding-top: 60px;
+}
