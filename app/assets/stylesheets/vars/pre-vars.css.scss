@@ -1,7 +1,8 @@
 
 // primary colors
-$text-blue: #7fb4e5;
-$heading-blue: #4578a0;
+$text-blue: #71c7f0;
+$heading-blue: #074b5b;
+$text-color: lighten($heading-blue, 7%);
 $dropdown-border: lighten($heading-blue, 25%);
 
 //Company name
@@ -27,8 +28,10 @@ $navbarBorder: 					  darken($navbarBackground, 10%);
 $navbarLinkColor:                 $heading-blue;
 $navbarLinkColorHover:            darken($heading-blue, 20%);
 $navbarLinkColorActive:           $navbarLinkColorHover;
-$navbarLinkBackgroundActive:      lighten($text-blue, 12%);
+$navbarLinkBackgroundActive:      rgba(lighten($text-blue, 12%), 0.9);
 $navbarLinkBackgroundHover:       lighten($text-blue, 25%);
+
+//The shape and appearance of dropdown button for phone nav
 
 .navbar .btn-navbar {
   background-color: $navbarLinkBackgroundHover;
@@ -43,14 +46,12 @@ $navbarLinkBackgroundHover:       lighten($text-blue, 25%);
 		  }
 }
 
+//Color of the three lines
 .navbar .btn-navbar .icon-bar {
   background-color: $heading-blue;
 }
 
-.btn .btn-navbar {
-	
-}
-
+//Spacing between the 3 lines dropdown
 .btn-navbar .icon-bar + .icon-bar {
   margin-top: 3px;
 }
@@ -58,9 +59,9 @@ $navbarLinkBackgroundHover:       lighten($text-blue, 25%);
 /* Sticky footer styles*/
 //-------------------------------------------------- 
 
-$footer-height: 45px;
-$footer-border: 2px;
 
+$footer-border: 2px;
+$footer-height: 40px;
 html,
 body {
 	height: 100%;
@@ -73,31 +74,5 @@ body {
 	height: auto !important;
 	height: 100%;
 	/* Negative indent footer by it's height */
-	margin: 0 auto ($footer_height * -1) - $footer-border;
-}
-
-/* Set the fixed height of the footer here */
-#push, #footer {
-	height: $footer-height;
-}
-#footer {
-	background-color: #f5f5f5;
-}
-
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-	#footer {
-		margin-left: -20px;
-		margin-right: -20px;
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-}
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-#wrap > .container {
-	padding-top: 60px;
+	margin: 0 auto 0 - $footer-height - $footer-border;
 }

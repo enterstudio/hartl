@@ -1,10 +1,27 @@
-<!-- Sticky Footer -->
-<footer id="footer">
-	<nav>
-		<ul>
-			<li><%= link_to "About Us",   aboutus_path %></li>
-			<li><%= link_to "Contact", 	contact_path %></li>
-			<li><a href="http://news.railstutorial.org/" target="_blank">News</a></li>
-		</ul>
-	</nav>
+<footer id="footer" class="navbar navbar-fixed-bottom">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+            
+			<div class="nav-collapse collapse">
+				<nav>
+					<ul class="nav pull-right">
+						<%= g_about_link(yield(:title)) %>
+						<%= g_contact_link(yield(:title)) %>
+						<%= g_faq_link(yield(:title)) %>
+						<%= g_careers_link(yield(:title)) %>
+						<%= g_privacy_link(yield(:title)) %>
+						<%= g_quotes_link(yield(:title)) %>
+						<%= g_terms_link(yield(:title)) %>
+						<li><a href="http://news.railstutorial.org/" target="_blank">News</a></li>
+						
+					</ul>
+				</nav>
+			</div><!--/.nav-collapse -->
+		</div>
+	</div>
 </footer>

@@ -2,13 +2,15 @@ Hartl::Application.routes.draw do
   get "users/new"
 
   root to: 'info_pages#home'
+  
+  match '/signup',    to: 'users#new'
 
   match '/faq',       to: 'info_pages#faq'
-  match '/aboutus',   to: 'info_pages#aboutus'
+  match '/about',   to: 'info_pages#aboutus'
   match '/contact',   to: 'info_pages#contact' 
   match '/terms',     to: 'info_pages#terms' 
   match '/privacy',   to: 'info_pages#privacy' 
-  match '/jobs',      to: 'info_pages#jobs' 
+  match '/careers',      to: 'info_pages#jobs' 
   match '/quotes',    to: 'info_pages#quotes'   
 
   # The priority is based upon order of creation:
