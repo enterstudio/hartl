@@ -58,7 +58,16 @@ gem 'puma'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  
+  #styling
+  gem 'bootstrap-sass'
   gem 'sass-rails'
+  
+  #font-awesome
+  gem "font-awesome-rails"
+  
+  # javascripts
+  gem 'jquery-rails'
   gem 'coffee-rails'
   
 
@@ -68,11 +77,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#jquery
-gem 'jquery-rails'
 
-#styling
-gem 'bootstrap-sass'
+
+
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

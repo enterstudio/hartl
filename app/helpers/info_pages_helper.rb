@@ -20,7 +20,8 @@ module InfoPagesHelper
   
   def g_home_logo(page_title)
     if page_title.empty?
-      link_to "MiniFeed", "#", class: "brand"
+      '<a href="#"><img class="brand" width="26" src="/assets/botflip-logo.svg"></a><a href="#" class="brand">Miniflip</a>'.html_safe
+      # link_to "MiniFeed", "#", class: "brand"
     else
       link_to "MiniFeed", root_path, class: "brand"
     end
@@ -29,11 +30,15 @@ module InfoPagesHelper
   def g_home_link(page_title)
     if page_title.empty?
       content_tag(:li, class: "active") do
-        link_to("Home", "#")
+        link_to("#") do
+          '<i class="icon-home icon-large"></i> Home'.html_safe
+        end
       end
     else
       content_tag(:li) do
-        link_to("Home", root_path)
+        link_to(root_path) do
+          '<i class="icon-home icon-large"></i> Home'.html_safe
+        end
       end
     end
   end

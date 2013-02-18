@@ -1,4 +1,4 @@
-<!-- Fixed navbar on top-->
+
 <header class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
@@ -12,11 +12,12 @@
 			<div class="nav-collapse collapse show-header">
 				<nav>
 					<ul class="nav pull-right">
+						<!-- <i class="icon-home icon-large"></i> -->
 						<%= g_home_link(yield(:title)) %>
-						<li><%= link_to "Sign In", '#'%></li>
+						<li><a href="#"><i class="icon-signin icon-large"></i> Sign In</a></li>
 					</ul>
 				</nav>
-			</div><!--/.nav-collapse -->
+			</div>
 		</div>
 	</div>
 </header>
