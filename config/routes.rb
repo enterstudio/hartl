@@ -1,4 +1,8 @@
 Hartl::Application.routes.draw do
+  get "errors/not_found"
+
+  get "errors/server_error"
+
   get "users/new"
 
   root to: 'info_pages#home'
@@ -6,12 +10,19 @@ Hartl::Application.routes.draw do
   match '/signup',    to: 'users#new'
 
   match '/faq',       to: 'info_pages#faq'
-  match '/about',   to: 'info_pages#aboutus'
+  match '/about',     to: 'info_pages#aboutus'
   match '/contact',   to: 'info_pages#contact' 
   match '/terms',     to: 'info_pages#terms' 
   match '/privacy',   to: 'info_pages#privacy' 
-  match '/careers',      to: 'info_pages#jobs' 
-  match '/quotes',    to: 'info_pages#quotes'   
+  match '/careers',   to: 'info_pages#jobs' 
+  match '/quotes',    to: 'info_pages#quotes' 
+  
+  
+  # custom errors
+  match '*notfound', to: 'errors#not_found'
+  match '/404',      to: 'errors#not_found'
+  match '/422',      to: 'errors#server_error'
+  match '/500',      to: 'errors#server_error'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

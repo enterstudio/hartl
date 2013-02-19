@@ -67,5 +67,9 @@ module Hartl
     
     # add app/assets/fonts to the asset path
     config.assets.paths << Rails.root.join("app", "assets", "fonts")
+    
+    #custom exceptions (error messages)
+    config.exceptions_app = self.routes
+    
   end
 end
