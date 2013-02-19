@@ -4,13 +4,14 @@ describe "Info pages view" do
   
   # Re-usable code
   let(:h1) { find 'h1' }
+  let(:rw) { find '.rw-sentence' }
   let(:title) { first('title').native.text }
   
   describe "Home page" do
     
     it "should have the Header 'Home' and correct title" do
       visit root_path
-      h1.must_have_content("Mini Feed")
+      rw.must_have_content("Mini")
       title.must_equal("Hartl App")
       title.wont_include("| Home")
     end
@@ -25,12 +26,12 @@ describe "Info pages view" do
     end
   end
   
-  describe "About Us page" do
+  describe "About Me page" do
 
-    it "should have the Header 'About Us' and correct title" do
-      visit aboutus_path
-      h1.must_have_content("About Us")
-      title.must_include("| About Us")
+    it "should have the Header 'About Me' and correct title" do
+      visit about_path
+      h1.must_have_content("About Me")
+      title.must_include("| About Me")
     end
   end
   
@@ -52,12 +53,12 @@ describe "Info pages view" do
     end
   end
   
-  describe "Jobs page" do
+  describe "Careers page" do
 
-    it "should have the Header 'Jobs' and correct title" do
-      visit jobs_path
-      h1.must_have_content("Jobs")
-      title.must_include("| Jobs")
+    it "should have the Header 'Careers' and correct title" do
+      visit careers_path
+      h1.must_have_content("Careers")
+      title.must_include("| Careers")
     end
   end
   

@@ -25,6 +25,7 @@ group :development, :test do
   gem 'capybara_minitest_spec'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
+  gem 'turn'
   
   ## guard
   gem 'rb-fsevent'
