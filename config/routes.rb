@@ -19,10 +19,10 @@ Hartl::Application.routes.draw do
   
   
   # custom errors
-  match '*notfound', to: 'errors#not_found'
-  match '/404',      to: 'errors#not_found'
   match '/422',      to: 'errors#server_error'
   match '/500',      to: 'errors#server_error'
+  match '/404',      to: 'errors#not_found'
+  match '*notfound', to: 'errors#not_found'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
