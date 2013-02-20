@@ -1,3 +1,9 @@
 // Place all the styles related to the errors controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$error-hero-bg: #ff7076;
+
+.error-hero {
+	background-color: lighten($error-hero-bg, 20%);
+}

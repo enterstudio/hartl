@@ -1,2 +1,16 @@
-<h1>Errors#not_found</h1>
-<p>Find me in app/views/errors/not_found.html.erb</p>
+<div class="hero-unit center error-hero">
+	
+	<h1>MiniFlip couldn't find that...</h1>
+	<h2>You were looking for :
+		<div class="text-error"> 
+		<strong><%= params[:notfound]%></strong>
+	</div>
+	</h2>
+	<h2>
+		Please try searching again or use the navigation at the top and bottom of the page.
+	</h2>
+	
+</div>
+
+
+
