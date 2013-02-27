@@ -7,6 +7,9 @@ common: &default_settings
   # New Relic service.
   license_key: '<%= ENV["18c48ec7b3cbae52dda29768a6d2e61591d39ff2"] %>'
   
+  # Puma compatibility
+  dispatcher: 'puma'
+  
   # Agent Enabled (Rails Only)
   # Use this setting to force the agent to run or not run.
   # Default is 'auto' which means the agent will install and run only
