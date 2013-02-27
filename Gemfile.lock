@@ -119,6 +119,7 @@ GEM
     minitest-wscolor (0.0.3)
       minitest (>= 2.3.1)
     multi_json (1.6.1)
+    newrelic_rpm (3.5.7.59)
     nokogiri (1.5.6)
     pg (0.14.1)
     poltergeist (1.1.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   minitest-matchers
   minitest-spec-rails
   minitest-wscolor
+  newrelic_rpm
   pg
   poltergeist
   pry

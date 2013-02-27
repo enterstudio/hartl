@@ -9,6 +9,9 @@ gem 'rails', '~>3.2.11'
 ## heroku
 group :production do
   gem 'pg'
+  
+  # new relic addon
+  gem 'newrelic_rpm'
 end
 
 
