@@ -3,8 +3,6 @@ Hartl::Application.routes.draw do
 
   get "errors/server_error"
 
-  get "users/new"
-
   root to: 'info_pages#home'
   
   match '/signup',    to: 'users#new'

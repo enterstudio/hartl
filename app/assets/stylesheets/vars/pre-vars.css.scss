@@ -29,7 +29,7 @@ $dropdown-border: lighten($heading-blue, 25%);
 
 
 //Navbar adjustments
-$white-alpha: 					  rgba(255,255,255,0.5);
+$white-alpha: 					  rgba(255,255,255,0.7);
 
 $navbarBackground: 				  $white-alpha;
 $navbarBackgroundHighlight:		  lighten($navbarBackground,10%);
@@ -39,31 +39,6 @@ $navbarLinkColorHover:            darken($heading-blue, 20%);
 $navbarLinkColorActive:           $navbarLinkColorHover;
 $navbarLinkBackgroundActive:      rgba(lighten($text-blue, 12%), 0.9);
 $navbarLinkBackgroundHover:       lighten($text-blue, 25%);
-
-//The shape and appearance of dropdown button for phone nav
-
-.navbar .btn-navbar {
-  background-color: $navbarLinkBackgroundHover;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-		  
-		  border-color: $dropdown-border $dropdown-border darken($dropdown-border, 10%) $dropdown-border;
-		  border-width: 2px;
-		  &:hover {
-		  	background-color: lighten($navbarLinkBackgroundHover, 1%);
-		  }
-}
-
-//Color of the three lines
-.navbar .btn-navbar .icon-bar {
-  background-color: $heading-blue;
-}
-
-//Spacing between the 3 lines dropdown
-.btn-navbar .icon-bar + .icon-bar {
-  margin-top: 3px;
-}
 
 /* Sticky footer styles*/
 //-------------------------------------------------- 

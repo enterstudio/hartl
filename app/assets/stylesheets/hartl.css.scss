@@ -1,14 +1,15 @@
-// vars to load before bootstrap
-@import "vars/pre-vars";
+
 
 // bootstrap
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-// custom fonts
+// vars to load after bootstrap
+@import "vars/pre-button";
+
+// custom fonts and vertical rhythm
 @import "fonts";
 @import "font-awesome";
-
 
 $grayMediumLight: #eaeaea;
 $hero-bg: lighten($text-color,70%);
@@ -22,7 +23,7 @@ $footer-padding-vert: 10px;
 $footer-margin-vert: 0px;
 $heading-margin: 30px;
 
-$size-h1: 3.4em;
+$size-h1: 64px;
 $size-h2: $size-h1 / 2;
 $link-padding-h2: $size-h2 / 7;
 $link-padding-h2-vert: $size-h2 / 16;
@@ -40,10 +41,9 @@ $link-padding-p-vert: $size-p / 16;
 
 .hero-unit{
 	h2{
+		@include adjust-font-size-to($size-h2);
 		color: $text-color;
 		font-weight: normal;
-		font-size: $size-h2;
-		line-height: $size-h2 / 1.3;
 	}
 	
 	background-color: $hero-bg;
@@ -78,7 +78,7 @@ a {
 }
 
 small {
-	font-size: $size-small;
+	@include adjust-font-size-to($size-small);
 	
 	a {
 		padding-left: $link-padding-small;
@@ -103,7 +103,7 @@ small {
 
 h2 {
 	
-	font-size: $size-h2;
+	@include adjust-font-size-to($size-h2);
 	
 	a {
 		padding-left: $link-padding-h2;
@@ -127,8 +127,7 @@ h2 {
 }
 
 p {
-	
-	font-size: $size-p;
+	@include adjust-font-size-to($size-p);
 	
 	a {
 		padding-left: $link-padding-p;
@@ -151,7 +150,7 @@ p {
 	}
 }
 
-
+//=====================================
 
 
 //Misc
@@ -174,7 +173,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.6em;
+	@include adjust-font-size-to(32px);
 	letter-spacing: -1px;
 	margin-bottom: $heading-margin;
 	font-weight: normal;
@@ -184,4 +183,10 @@ h2 {
 
 #wrap > .container {
 	padding-top: 60px;
+}
+
+//Legal Ordered List Roman Numerals
+
+OL.roman {
+	list-style-type: upper-roman;
 }

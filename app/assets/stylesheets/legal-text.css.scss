@@ -1,0 +1,16 @@
+nav > small {
+	@include adjust-font-size-to(14px);
+}
+
+article > p {
+	@include adjust-font-size-to(18px);
+}
+
+#first {
+	@include leader(2);
+}
+
+#last {
+	@include trailer(5);
+	@include trailing-border(2px, 2, 16px, dashed);
+}

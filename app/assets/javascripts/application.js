@@ -16,4 +16,5 @@
 //= require bootstrap-collapse
 //= require bootstrap-transition
 
-//= require_tree .
+
+//= require footer-phone

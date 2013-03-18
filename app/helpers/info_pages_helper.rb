@@ -23,7 +23,7 @@ module InfoPagesHelper
       '<a href="#"><img class="brand" width="26" src="/assets/botflip-logo.svg"></a><a href="#" class="brand">Miniflip</a>'.html_safe
       # link_to "MiniFeed", "#", class: "brand"
     else
-      link_to "MiniFeed", root_path, class: "brand"
+      '<a href="/"><img class="brand" width="26" src="/assets/botflip-logo.svg"></a><a href="/" class="brand">Miniflip</a>'.html_safe
     end
   end
   
@@ -45,11 +45,11 @@ module InfoPagesHelper
   
   def g_about_link(page_title)
     if page_title == "About Me"
-      content_tag(:li, class: "active") do
+      content_tag(:li, class: "active pushdown") do
         link_to("About", "#")
       end
     else
-      content_tag(:li) do
+      content_tag(:li, class: "pushdown") do
         link_to("About", about_path)
       end
     end

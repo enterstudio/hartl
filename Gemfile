@@ -66,6 +66,7 @@ group :assets do
   #styling
   gem 'bootstrap-sass'
   gem 'sass-rails'
+  gem 'compass-rails'
   
   #font-awesome
   gem "font-awesome-rails"
@@ -73,6 +74,7 @@ group :assets do
   # javascripts
   gem 'jquery-rails'
   gem 'coffee-rails'
+  
   
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes

@@ -3,9 +3,11 @@ class InfoPagesController < ApplicationController
   end
 
   def terms
+    render layout: 'legal_custom'
   end
 
   def privacy
+    render layout: 'legal_custom'
   end
 
   def aboutus
