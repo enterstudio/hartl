@@ -128,6 +128,7 @@ GEM
       minitest (>= 2.3.1)
     multi_json (1.7.0)
     newrelic_rpm (3.5.8.72)
+    nio4r (2.5.2)
     nokogiri (1.5.6)
     pg (0.14.1)
     poltergeist (1.1.0)
@@ -139,9 +140,9 @@ GEM
       coderay (~> 1.0.5)
       method_source (~> 0.8)
       slop (~> 3.4)
-    puma (1.6.3)
-      rack (~> 1.2)
-    rack (1.4.5)
+    puma (4.3.3)
+      nio4r (~> 2.0)
+    rack (1.4.7)
     rack-cache (1.2)
       rack (>= 0.4)
     rack-contrib (1.1.0)
@@ -235,7 +236,7 @@ DEPENDENCIES
   pg
   poltergeist
   pry
-  puma
+  puma (>= 3.12.2)
   rack-livereload
   rails (~> 3.2.11)
   rb-fsevent
@@ -245,3 +246,6 @@ DEPENDENCIES
   terminal-notifier-guard
   turn
   uglifier (>= 1.0.3)
+
+BUNDLED WITH
+   1.17.3
