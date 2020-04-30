@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,7 +24,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'minitest'
   gem 'minitest-matchers'
-  gem 'minitest-spec-rails'
+  gem 'minitest-spec-rails', '>= 4.3.8'
   gem 'capybara_minitest_spec'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
@@ -47,7 +47,7 @@ group :development, :test do
   ## errors
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'meta_request'
+  gem 'meta_request', '>= 0.2.2'
   
   ## pry for debugging
   gem 'pry'
@@ -65,15 +65,15 @@ group :assets do
   
   #styling
   gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 4.0.0'
   gem 'compass-rails'
   
   #font-awesome
-  gem "font-awesome-rails"
+  gem "font-awesome-rails", ">= 3.0.2.0"
   
   # javascripts
-  gem 'jquery-rails'
-  gem 'coffee-rails'
+  gem 'jquery-rails', '>= 2.2.1'
+  gem 'coffee-rails', '>= 4.0.0'
   
   
 
