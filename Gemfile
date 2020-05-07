@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,7 +24,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'minitest'
   gem 'minitest-matchers'
-  gem 'minitest-spec-rails'
+  gem 'minitest-spec-rails', '>= 4.3.8'
   gem 'capybara_minitest_spec'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
