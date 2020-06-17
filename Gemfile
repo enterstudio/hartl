@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 5.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,12 +20,12 @@ group :development, :test do
   gem 'sqlite3'
   
   ## testing
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.0.2'
+  gem 'poltergeist', '>= 1.1.0'
   gem 'minitest'
   gem 'minitest-matchers'
-  gem 'minitest-spec-rails'
-  gem 'capybara_minitest_spec'
+  gem 'minitest-spec-rails', '>= 4.3.8'
+  gem 'capybara_minitest_spec', '>= 1.0.0'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
   gem 'turn'
@@ -39,7 +39,7 @@ group :development, :test do
   gem 'guard-shell'
   
   ## rack-livereload
-  gem 'rack-livereload'
+  gem 'rack-livereload', '>= 0.3.11'
   
   ## spring accelerator (like spork)
   gem 'spring'
@@ -47,7 +47,7 @@ group :development, :test do
   ## errors
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'meta_request'
+  gem 'meta_request', '>= 0.2.2'
   
   ## pry for debugging
   gem 'pry'
@@ -56,7 +56,7 @@ group :development, :test do
 end
 
 # Use Puma as the app server
-gem 'puma'
+gem 'puma', '>= 2.12.0'
 
 
 # Gems used only for assets and not required
@@ -65,15 +65,15 @@ group :assets do
   
   #styling
   gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 5.0.5'
   gem 'compass-rails'
   
   #font-awesome
-  gem "font-awesome-rails"
+  gem "font-awesome-rails", ">= 3.0.2.0"
   
   # javascripts
-  gem 'jquery-rails'
-  gem 'coffee-rails'
+  gem 'jquery-rails', '>= 4.4.0'
+  gem 'coffee-rails', '>= 4.1.1'
   
   
 
