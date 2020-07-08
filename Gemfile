@@ -72,7 +72,7 @@ group :assets do
   gem "font-awesome-rails"
   
   # javascripts
-  gem 'jquery-rails'
+  gem 'jquery-rails', '>= 3.1.3'
   gem 'coffee-rails'
   
   
