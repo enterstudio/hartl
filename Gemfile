@@ -21,7 +21,7 @@ group :development, :test do
   
   ## testing
   gem 'capybara'
-  gem 'poltergeist'
+  gem 'poltergeist', '>= 1.1.0'
   gem 'minitest'
   gem 'minitest-matchers'
   gem 'minitest-spec-rails'
