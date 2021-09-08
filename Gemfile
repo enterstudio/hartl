@@ -20,12 +20,12 @@ group :development, :test do
   gem 'sqlite3'
   
   ## testing
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.0.2'
+  gem 'poltergeist', '>= 1.1.0'
   gem 'minitest'
   gem 'minitest-matchers'
   gem 'minitest-spec-rails'
-  gem 'capybara_minitest_spec'
+  gem 'capybara_minitest_spec', '>= 1.0.0'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
   gem 'turn'
@@ -45,7 +45,7 @@ group :development, :test do
   gem 'spring'
   
   ## errors
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
   gem 'meta_request'
   
