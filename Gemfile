@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 3.2.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -56,7 +56,7 @@ group :development, :test do
 end
 
 # Use Puma as the app server
-gem 'puma'
+gem 'puma', '>= 2.12.0'
 
 
 # Gems used only for assets and not required
