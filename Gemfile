@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -65,15 +65,15 @@ group :assets do
   
   #styling
   gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 5.0.8'
   gem 'compass-rails'
   
   #font-awesome
   gem "font-awesome-rails"
   
   # javascripts
-  gem 'jquery-rails'
-  gem 'coffee-rails'
+  gem 'jquery-rails', '>= 4.0.1'
+  gem 'coffee-rails', '>= 4.2.2'
   
   
 
