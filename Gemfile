@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -35,7 +35,7 @@ group :development, :test do
   gem 'terminal-notifier-guard'
   gem 'guard-pow'
   gem 'guard-bundler'
-  gem 'guard-livereload'
+  gem 'guard-livereload', '>= 2.5.2'
   gem 'guard-shell'
   
   ## rack-livereload
@@ -45,7 +45,7 @@ group :development, :test do
   gem 'spring'
   
   ## errors
-  gem 'better_errors'
+  gem 'better_errors', '>= 2.8.0'
   gem 'binding_of_caller'
   gem 'meta_request'
   
@@ -56,7 +56,7 @@ group :development, :test do
 end
 
 # Use Puma as the app server
-gem 'puma'
+gem 'puma', '>= 4.3.12'
 
 
 # Gems used only for assets and not required
@@ -64,23 +64,23 @@ gem 'puma'
 group :assets do
   
   #styling
-  gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'bootstrap-sass', '>= 3.4.0'
+  gem 'sass-rails', '>= 5.0.8'
   gem 'compass-rails'
   
   #font-awesome
   gem "font-awesome-rails"
   
   # javascripts
-  gem 'jquery-rails'
-  gem 'coffee-rails'
+  gem 'jquery-rails', '>= 4.4.0'
+  gem 'coffee-rails', '>= 4.2.2'
   
   
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier', '>= 2.7.2'
 end
 
 
