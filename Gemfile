@@ -56,7 +56,7 @@ group :development, :test do
 end
 
 # Use Puma as the app server
-gem 'puma'
+gem 'puma', '>= 5.6.8'
 
 
 # Gems used only for assets and not required
