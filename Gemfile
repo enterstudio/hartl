@@ -20,12 +20,12 @@ group :development, :test do
   gem 'sqlite3'
   
   ## testing
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.0.3'
+  gem 'poltergeist', '>= 1.1.1'
   gem 'minitest'
   gem 'minitest-matchers'
   gem 'minitest-spec-rails'
-  gem 'capybara_minitest_spec'
+  gem 'capybara_minitest_spec', '>= 1.0.1'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
   gem 'turn'
