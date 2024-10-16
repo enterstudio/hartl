@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 6.1.7', '>= 6.1.7.9'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,7 +24,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'minitest'
   gem 'minitest-matchers'
-  gem 'minitest-spec-rails'
+  gem 'minitest-spec-rails', '>= 6.0.1'
   gem 'capybara_minitest_spec'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
@@ -65,7 +65,7 @@ group :assets do
   
   #styling
   gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 6.0.0'
   gem 'compass-rails'
   
   #font-awesome
