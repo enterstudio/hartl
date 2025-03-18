@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 4.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,7 +24,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'minitest'
   gem 'minitest-matchers'
-  gem 'minitest-spec-rails'
+  gem 'minitest-spec-rails', '>= 6.0.1'
   gem 'capybara_minitest_spec'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
@@ -56,7 +56,7 @@ group :development, :test do
 end
 
 # Use Puma as the app server
-gem 'puma'
+gem 'puma', '>= 2.12.0'
 
 
 # Gems used only for assets and not required
@@ -65,15 +65,15 @@ group :assets do
   
   #styling
   gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 6.0.0'
   gem 'compass-rails'
   
   #font-awesome
   gem "font-awesome-rails"
   
   # javascripts
-  gem 'jquery-rails'
-  gem 'coffee-rails'
+  gem 'jquery-rails', '>= 4.0.0'
+  gem 'coffee-rails', '>= 4.0.0'
   
   
 
