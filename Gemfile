@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 #core
-gem 'rails', '~>3.2.11'
+gem 'rails', '~> 3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -20,12 +20,12 @@ group :development, :test do
   gem 'sqlite3'
   
   ## testing
-  gem 'capybara'
-  gem 'poltergeist'
+  gem 'capybara', '>= 2.0.3'
+  gem 'poltergeist', '>= 1.1.1'
   gem 'minitest'
   gem 'minitest-matchers'
-  gem 'minitest-spec-rails'
-  gem 'capybara_minitest_spec'
+  gem 'minitest-spec-rails', '>= 4.7.0'
+  gem 'capybara_minitest_spec', '>= 1.0.1'
   gem 'minitest-focus'
   gem 'minitest-wscolor'
   gem 'turn'
@@ -33,10 +33,10 @@ group :development, :test do
   ## guard
   gem 'rb-fsevent'
   gem 'terminal-notifier-guard'
-  gem 'guard-pow'
-  gem 'guard-bundler'
-  gem 'guard-livereload'
-  gem 'guard-shell'
+  gem 'guard-pow', '>= 2.0.0'
+  gem 'guard-bundler', '>= 2.0.0'
+  gem 'guard-livereload', '>= 1.2.0'
+  gem 'guard-shell', '>= 0.5.2'
   
   ## rack-livereload
   gem 'rack-livereload'
@@ -47,7 +47,7 @@ group :development, :test do
   ## errors
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'meta_request'
+  gem 'meta_request', '>= 0.4.0'
   
   ## pry for debugging
   gem 'pry'
@@ -65,15 +65,15 @@ group :assets do
   
   #styling
   gem 'bootstrap-sass'
-  gem 'sass-rails'
+  gem 'sass-rails', '>= 4.0.0'
   gem 'compass-rails'
   
   #font-awesome
-  gem "font-awesome-rails"
+  gem "font-awesome-rails", ">= 3.1.1.0"
   
   # javascripts
-  gem 'jquery-rails'
-  gem 'coffee-rails'
+  gem 'jquery-rails', '>= 2.2.2'
+  gem 'coffee-rails', '>= 4.0.0'
   
   
 
